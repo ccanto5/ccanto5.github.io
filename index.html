@@ -1,9 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="change order example">
+       <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
+
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
   <title>Change Order </title>
 </head>
 
@@ -131,37 +152,71 @@
 			
 		</select>
 	</fieldset>
+						<div class="form-group">
 
-	
-	<fieldset class="pure-group">
-      <label for="Fives">Fives: </label>
-      <input id="Fives" name="Fives" pattern = "[0-9]{1,6}" placeholder="Fives" />
-    </fieldset>
-	
-	<fieldset class="pure-group">
-      <label for="Ones">Ones: </label>
-      <input id="Ones" name="Ones" pattern = "[0-9]{1,6}" placeholder="Ones" />
-    </fieldset>
-	
-	<fieldset class="pure-group">
-      <label for="Quarters">Quarters: </label>
-      <input id="Quarters" name="Quarters" pattern = "[0-9]{1,6}" placeholder="Quarters" />
-    </fieldset>
+                               <div class="input-group">
+                                    <label for="fives" class="sr-only">Fives: </label>
+                                    <div class="input-group-prepend">
 
-	<fieldset class="pure-group">
-      <label for="Dimes">Dimes: </label>
-      <input id="Dimes" name="Dimes" pattern = "[0-9]{1,6}" placeholder="Dimes" />
-    </fieldset>
-	
-	<fieldset class="pure-group">
-      <label for="Nickels">Nickels: </label>
-      <input id="Nickels" name="Nickels" pattern = "[0-9]{1,6}" placeholder="Nickels" />
-    </fieldset>
-	
-	<fieldset class="pure-group">
-      <label for="Pennies">Pennies: </label>
-      <input id="Pennies" name="Pennies" pattern = "[0-9]{1,6}" placeholder="Pennies" />
-    </fieldset>
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">Fives   </span>
+                                    </div>
+                                    <input id="fives" type="number" min="0" step="5.00" placeholder="Fives" class="form-control col-2" />
+                                    <div id="fives-invalid" class="invalid-feedback">Must be divisible by $5.</div>
+                                </div>
+
+
+                                <div class="input-group">
+                                    <label for="ones" class="sr-only">Ones: </label>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">Ones    </span>
+                                    </div>
+                                    <input id="ones" type="number" min="0" step="1.00" placeholder="Ones" class="form-control col-2" />
+                                    <div id="ones-invalid" class="invalid-feedback">Must be divisible by $1.</div>
+                                </div>
+
+
+                                <div class="input-group">
+                                    <label for="quarters" class="sr-only">Quarters: </label>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-lg">Quarters :</span>
+                                    </div>
+                                    <input id="quarters" type="number" min="0" step="10.00" placeholder="Quarters" class="form-control col-2" />
+                                    <div id="quarters-invalid" class="invalid-feedback">Must be divisible by $10.</div>
+                                </div>
+
+                                <div class="input-group input-group-lg">
+	                                <div class="input-group">
+	                                    <label for="dimes" class="sr-only">Dimes: </label>
+	                                    <div class="input-group-prepend">
+	                                        <span class="input-group-text" id="inputGroup-sizing-lg">Dimes    :</span>
+	                                    </div>
+	                                    <input id="dimes" type="number" min="0" step="5.00" placeholder="Dimes" class="form-control col-2" />
+	                                    <div id="dimes-invalid" class="invalid-feedback">Must be divisible by $5.</div>
+	                                </div>
+	                            </div>
+
+                                <div class="input-group input-group-lg">
+	                                <div class="input-group">
+	                                    <label for="nickels" class="sr-only">Nickels: </label>
+	                                    <div class="input-group-prepend">
+	                                       <span class="input-group-text" id="inputGroup-sizing-lg">Nickels  :</span>
+	                                    </div>
+	                                    <input id="nickels" type="number" min="0" step="2.00" placeholder="Nickels" class="form-control col-2" />
+	                                    <div id="nickels-invalid" class="invalid-feedback">Must be divisible by $2.</div>
+	                                </div>
+	                            </div>
+
+	                            <div class="input-group input-group-lg">
+	                                <div class="input-group">
+	                                    <label for="pennies" class="sr-only">Pennies: </label>
+	                                    <div class="input-group-prepend">
+	                                        <span class="input-group-text" id="inputGroup-sizing-lg">Pennies </span>
+	                                    </div>
+	                                    <input id="pennies" type="number" min="0" step="0.50" placeholder="Pennies" class="form-control col-2" />
+	                                    <div id="pennies-invalid" class="invalid-feedback">Must be divisible by $0.50.</div>
+	                                </div>
+                            </div>
+                           </div>
 	
 	<fieldset class="pure-group">
       <label for="Requested">Requested by:</label>
@@ -178,9 +233,6 @@
 		</div>
 	</div> 
 	
-	<button class="button-success pure-button button-xlarge" type="button" onclick="Add()"> Add Another Store</button>
-
-
     <button class="button-success pure-button button-xlarge">
       <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
 
